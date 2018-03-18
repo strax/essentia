@@ -38,7 +38,7 @@ is_git_root() {
 strax_git_info() {
   if $(is_git); then 
     local prefix="\ue0a0"
-    echo -n "%{%b$(color blue)%}${prefix} ${vcs_info_msg_0_}$(strax_git_dirty)%{%B%}"
+    echo -n " %{%b$(color blue)%}${prefix} ${vcs_info_msg_0_}$(strax_git_dirty)%{%B%}"
   fi
 }
 
@@ -50,7 +50,7 @@ strax_prompt_arrow() {
 
 strax_prompt() {
   RETVAL=$?
-  echo -n "$(strax_dir) $(strax_git_info) $(strax_prompt_arrow) "
+  echo -n "$(strax_dir)$(strax_git_info) $(strax_prompt_arrow) "
 }
 
 precmd() {
