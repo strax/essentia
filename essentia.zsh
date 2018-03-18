@@ -44,7 +44,7 @@ strax_git_info() {
 
 strax_prompt_arrow() {
   local arrow_color
-  [[ RETVAL -eq 0 ]] && arrow_color="$(color 028)" || arrow_color="$(color red)"
+  [[ RETVAL -eq 0 ]] && arrow_color="$(color green)" || arrow_color="$(color red)"
   echo -n "%{%b$arrow_color%}->$(color)"
 }
 
