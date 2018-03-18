@@ -24,7 +24,7 @@ strax_git_dirty() {
 }
 
 is_git_dirty() {
-  command test ! $(git diff-index --quiet HEAD &>/dev/null)
+  ! git diff-index --quiet HEAD &>/dev/null
 }
 
 is_git() {
