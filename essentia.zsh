@@ -32,7 +32,7 @@ is_git() {
 }
 
 is_git_root() {
-  command test $(git rev-parse --show-toplevel) = $(pwd)
+  command test "$(git rev-parse --show-toplevel)" = "$(pwd)"
 }
 
 strax_git_info() {
