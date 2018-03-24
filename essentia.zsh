@@ -11,7 +11,7 @@ strax_dir() {
 
   if is_git && ! is_git_root; then
     local git_root=${$(git rev-parse --absolute-git-dir):h}
-    dir="$(color magenta)$git_root:t${$(expr $(pwd -P) : "$git_root\(.*\)")}$(color)"
+    dir="$(color magenta)$git_root:t${$(expr "$(pwd -P)" : "$git_root\(.*\)")}$(color)"
  else
     dir="%~"
   fi
